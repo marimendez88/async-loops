@@ -123,9 +123,9 @@ export default defineComponent({
           forTotalAppears.value++;
         }
         const later = Date.now();
-        const total = later - start
+        const total = later - start;
         logger(item.city, total);
-        // item.valueAdded = total.toString();
+        item.valueAdded = total.toString();
       }
       const finalTime = performance.now();
       forTimer.value = seconds;
