@@ -1,21 +1,21 @@
 import axios, { AxiosResponse } from 'axios';
 
 export class AxiosService {
-  private apiClient = axios.create({
-    baseURL: 'https://andruxnet-world-cities-v1.p.rapidapi.com/',
-    withCredentials: false,
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-  });
 
-  public getAxiosCall = async (endpoint: string) => {
+  private options = {
+    method: 'GET',
+    url: 'https://andruxnet-world-cities-v1.p.rapidapi.com/',
+    params: { query: 'paris'},
+    headers: {
+      'X-RapidAPI-Host': 'andruxnet-world-cities-v1.p.rapidapi.com',
+      'X-RapidAPI-Key': 'caf5bed8cfmsh16cc6f2d6d50430p18c245jsn06404677e942'
+    }
+  };
+
+  public getAxiosCall = async (queryPassed: string) => {
     try {
-      console.log('here');
-      return this.apiClient.get<AxiosResponse>(
-        endpoint
-      ) as unknown as AxiosResponse;
+      this.options.params.query = queryPassed;
+      return axios.request(this.options);
     } catch (error) {
       if (axios.isAxiosError(error)) {
         console.error('error message: ', error.message);
