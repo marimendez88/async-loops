@@ -12,6 +12,7 @@ export class AxiosService {
 
   public getAxiosCall = async (endpoint: string) => {
     try {
+      console.log('here');
       return this.apiClient.get<AxiosResponse>(
         endpoint
       ) as unknown as AxiosResponse;
