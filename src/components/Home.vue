@@ -274,6 +274,7 @@ export default defineComponent({
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   .search {
     width: 70px;
     height: 70px;
@@ -301,6 +302,7 @@ export default defineComponent({
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap;
     .btn-primary {
       width: 150px;
       height: 50px;
