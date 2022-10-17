@@ -2,7 +2,7 @@
 
 
 ## Details
-This repo contains a back to back test to compare loops in asyncronhous environments used to explain a group of developers how they work and when we need to use each of them.
+This repo contains a back to back test to compare loops in asynchronous environments used to explain a group of developers how they work and when we need to use each of them.
 
 ##Technologies
 Vue JS
